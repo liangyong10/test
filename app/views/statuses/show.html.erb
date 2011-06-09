@@ -1,0 +1,33 @@
+<p>
+  <b>Statusid:</b>
+  <%=h @status.statusID %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @status.text %>
+</p>
+
+<p>
+  <b>Favarited:</b>
+  <%=h @status.favarited %>
+</p>
+
+<p>
+  <b>Reply to userid:</b>
+  <%=h @status.reply_to_userID %>
+</p>
+
+<p>
+  <b>Retweeted:</b>
+  <%=h @status.retweeted %>
+</p>
+
+<p>
+  <b>Usr:</b>
+  <%=h @status.usr %>
+</p>
+
+
+<%= link_to 'Edit', edit_status_path(@status) %> |
+<%= link_to 'Back', statuses_path %>

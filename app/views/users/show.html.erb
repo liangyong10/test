@@ -1,0 +1,38 @@
+<p>
+  <b>Userid:</b>
+  <%=h @user.userID %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @user.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @user.description %>
+</p>
+
+<p>
+  <b>Followers:</b>
+  <%=h @user.followers %>
+</p>
+
+<p>
+  <b>Friends:</b>
+  <%=h @user.friends %>
+</p>
+
+<p>
+  <b>Statuses:</b>
+  <%=h @user.statuses %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

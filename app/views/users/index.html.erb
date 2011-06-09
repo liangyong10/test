@@ -1,0 +1,84 @@
+<div id="user-list">
+	<h1>Listing users</h1>
+
+	<h2>
+		<span onclick="getinfo(1)">展开</span>
+	</h2>
+
+	<div id="kankan" class="hidden">
+		<a>This is a test!</a>
+		<span onclick="getinfo(0)">收起</span>
+	</div>			
+
+	<h1>
+		<span onmouseover="changemark(0)">标签0</span>
+		<span onmouseover="changemark(1)">标签1</span>
+	</h1>
+					
+	<!-- 标签0 -->
+	<div id="mark0" class="show">
+		<table>
+			<% for user in @users %>
+  				<tr class="<%= cycle('list-line-odd','list-line-even')%>">
+    					<td><%=h user.name %></td><tr />
+    					<td><%=h user.description %></td> <tr />  
+  				</tr>
+			<% end %>
+		</table>
+	</div>
+	<!-- 标签0：end -->
+					
+					
+	<!-- 标签1 -->
+	<div id="mark1" class="hidden">
+		<table>
+			<% for user in @users %>
+  				<tr class="<%= cycle('list-line-odd','list-line-even')%>">
+    					<td><%=h user.userID %></td>
+					<td><%=h user.createAt %></td><tr />
+    					<td><%=h user.description %></td> <tr />  
+  				</tr>
+			<% end %>
+		</table>				
+
+
+	</div>
+	<!-- 标签1：end -->					
+
+
+<!-- 标签切换script -->					
+<script type="text/javascript">
+	function changemark(n)
+	{
+		if (n == 0) 
+		{
+			
+			$("mark0").className = "show";
+			$("mark1").className = "hidden";
+		}
+		else
+		{
+			
+			$("mark0").className = "hidden";
+			$("mark1").className = "show";
+		}
+	}
+
+	function getinfo(n)
+	{
+		if(n == 1)
+		{
+			$("kankan").className = "show";
+		}
+		else
+		{
+			$("kankan").className = "hidden";
+		}
+	}
+</script>
+	
+
+
+</div>
+
+

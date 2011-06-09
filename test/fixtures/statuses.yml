@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  statusID: MyString
+  text: MyText
+  favarited: 9.99
+  reply_to_userID: MyString
+  retweeted: MyString
+  usr: MyString
+
+two:
+  statusID: MyString
+  text: MyText
+  favarited: 9.99
+  reply_to_userID: MyString
+  retweeted: MyString
+  usr: MyString

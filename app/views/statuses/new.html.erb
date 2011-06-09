@@ -1,0 +1,35 @@
+<h1>New status</h1>
+
+<% form_for(@status) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :statusID %><br />
+    <%= f.text_field :statusID %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.label :favarited %><br />
+    <%= f.text_field :favarited %>
+  </p>
+  <p>
+    <%= f.label :reply_to_userID %><br />
+    <%= f.text_field :reply_to_userID %>
+  </p>
+  <p>
+    <%= f.label :retweeted %><br />
+    <%= f.text_field :retweeted %>
+  </p>
+  <p>
+    <%= f.label :usr %><br />
+    <%= f.text_field :usr %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', statuses_path %>
